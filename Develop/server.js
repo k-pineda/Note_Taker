@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 let notesDb=require(`./db/db.json`);
 const fs=require(`fs`);
-const uuid=require(`uuid`)
+const uuid=require('./helper/uuid')
 
 const PORT = 3001;
 
@@ -69,6 +69,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
+      id: uuid()
     };
     // Obtain existing notes
     fs.readFile('./db/db.json', 'utf-8', (err, data) => {
