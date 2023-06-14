@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 let notesDb=require(`./db/db.json`);
 const fs=require(`fs`);
+const uuid=require(`uuid`)
 
 const PORT = 3001;
 
@@ -92,13 +93,7 @@ app.post('/api/notes', (req, res) => {
       }
     });
 
-  const response = {
-      status: 'success',
-      body: newNote,
-    };
-
-    console.log(response);
-    res.status(201).json(response);
+    res.status(201);
   } else {
     res.status(500).json('Error in posting note');
   }
