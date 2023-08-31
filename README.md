@@ -22,5 +22,8 @@ Upon opening the Note Taker application, you will be presented with a landing pa
 To view the contents of an existing note, click on the note's title in the left-hand column. The note will be displayed in the right-hand column.
 To create a new note, click on the Write icon in the navigation at the top of the page. The fields will be cleared, allowing you to enter a new note.
 
+Heroku Deployed site: https://note-taker-kp-887dbbf568a7.herokuapp.com/
+
+Note_Taker Github Repo: https://github.com/k-pineda/Note_Taker.git
   
   
