@@ -9,15 +9,16 @@
 
   To install necessary dependencies, run the following command:
 
-    To install and run the Note Taker application, these are the steps to follow: 1. Clone the GitHub repository. 2. Navigate to the project's root directory in your terminal. 3. Run the following command to install the required dependencies: npm install
-4. Start the application by running the following command: node server.js
-5. Open your web browser and visit http://localhost:3001 to access the application.
+    1. Clone the GitHub repository. 
+    2. Navigate to the project's root directory in your terminal. 
+    3. Run the following command to install the required dependencies: npm install 
+    4. Start the application by running the following command: node server.js 
+    5. Open your web browser and visit http://localhost:3001 to access the application.
 
 
   ## Usage
 
-Upon opening the Note Taker application, you will be presented with a landing page. Click on the button "Get Started" and the notes page will show with see the existing notes listed in the left-hand column. On the right-hand side, you will find empty fields to enter the new note's title and text. Enter the desired title and text for your note. After entering the note details, a Save ![image](https://github.com/k-pineda/Note_Taker/assets/128410226/a5d58ebc-71c8-436e-b87c-ab4d6b3e894c)
- icon will appear in the navigation at the top of the page. Click on the Save icon to save the new note. The note will be added to the left-hand column along with the existing notes.
+Upon opening the Note Taker application, you will be presented with a landing page. Click on the button "Get Started" and the notes page will show with see the existing notes listed in the left-hand column. On the right-hand side, you will find empty fields to enter the new note's title and text. Enter the desired title and text for your note. After entering the note details, a Save (looks like a floppy disk) icon will appear in the navigation at the top of the page. Click on the Save icon to save the new note. The note will be added to the left-hand column along with the existing notes.
 To view the contents of an existing note, click on the note's title in the left-hand column. The note will be displayed in the right-hand column.
 To create a new note, click on the Write icon in the navigation at the top of the page. The fields will be cleared, allowing you to enter a new note.
 
