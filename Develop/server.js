@@ -34,24 +34,6 @@ app.get('/api/notes', (req, res) => {
  
 });
 
-// GET a single note
-// app.get('/api//:noteId', (req, res) => {
-//   if (req.params.noteId) {
-//     console.info(`${req.method} request received to get a single a review`);
-//     const noteId = req.params.noteId;
-//     for (let i = 0; i < notes.length; i++) {
-//       const currentNote = notes[i];
-//       if (currentNote.noteId === noteId) {
-//         res.json(currentNote);
-//         return;
-//       }
-//     }
-//     res.status(404).send('Note not found');
-//   } else {
-//     res.status(400).send('Note ID not provided');
-//   }
-// });
-
 
 // POST request for notes
 app.post('/api/notes', (req, res) => {
@@ -104,12 +86,16 @@ app.post('/api/notes', (req, res) => {
 });
 
 // DELETE request for upvotes
-app.delete('/api/notes', (req, res) => {
-  // Inform the client
-  res.json(`${req.method} request received to delete note`);
-
-  // Log our request to the terminal
-  console.info(`${req.method} request received to delete note`);
+app.delete('/api/notes/:id', (req, res) => {
+  const data = JSON.parse(fs.readFileSync("./db/db.json", "utf-8"))
+  const filterData = data.filter(note => note.id !== req.params.id)
+  fs.writeFile('./db/db.json', JSON.stringify(filterData, null, 4),
+    (writeErr) =>
+      writeErr
+        ? console.error(writeErr)
+        : console.info('Successfully deleted note!')
+  )
+  res.status(200).json({ok: true})
 });
 
 
